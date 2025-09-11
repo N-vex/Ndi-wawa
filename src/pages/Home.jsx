@@ -51,15 +51,15 @@ export default function App() {
     <div className="relative h-full overflow-hidden">
       {/* Item 1 */}
       <div className="hidden duration-700 ease-in-out" data-carousel-item>
-        <img src="/assets/slide1.jpg" className="absolute block w-full h-full object-cover" alt="slide1"/>
+        <img src="./public/assets/slide1.jpg" className="absolute block w-full h-full object-cover" alt="slide1"/>
       </div>
       {/* Item 2 */}
       <div className="hidden duration-700 ease-in-out" data-carousel-item>
-        <img src="/assets/slide2.jpg" className="absolute block w-full h-full object-cover" alt="slide2"/>
+        <img src="./public/assets/slide2.jpg" className="absolute block w-full h-full object-cover" alt="slide2"/>
       </div>
       {/* Item 3 */}
       <div className="hidden duration-700 ease-in-out" data-carousel-item>
-        <img src="/assets/slide3.jpg" className="absolute block w-full h-full object-cover" alt="slide3"/>
+        <img src="./public/assets/slide3.jpg" className="absolute block w-full h-full object-cover" alt="slide3"/>
       </div>
     </div>
   </div>
