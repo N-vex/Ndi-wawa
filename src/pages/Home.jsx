@@ -55,7 +55,7 @@ export default function App() {
       </div>
       {/* Item 2 */}
       <div className="hidden duration-700 ease-in-out" data-carousel-item>
-        <img src="./src/assets/slide2.jpg" className="absolute block w-full h-full object-cover" alt="slide2"/>
+        <img src="/assets/slide2.jpg" className="absolute block w-full h-full object-cover" alt="slide2"/>
       </div>
       {/* Item 3 */}
       <div className="hidden duration-700 ease-in-out" data-carousel-item>
