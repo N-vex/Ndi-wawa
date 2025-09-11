@@ -87,7 +87,7 @@ const About = () => {
             {/* Logo 1 */}
             <img 
               ref={(el) => (logoRefs.current[0] = el)}
-              src=".\src\assets\short1.png"
+              src="/assets/short1.png"
               alt="Mintly"
               className="h-24 cursor-pointer text-white"
             />
@@ -95,7 +95,7 @@ const About = () => {
             {/* Logo 2 */}
             <img
               ref={(el) => (logoRefs.current[1] = el)}
-              src=".\src\assets\short3.png"
+              src="/assets/short3.png"
               alt="Snowflake"
               className="h-24 cursor-pointer"
             />
@@ -119,7 +119,7 @@ const About = () => {
             {/* Leader */}
             <div className="bg-white rounded-lg shadow-lg p-6 text-center ">
              <a href="/Profile"> <img 
-                src="./src\assets\profile7.jpg"
+                src="/assets/profile7.jpg"
                 alt="Leader"
                 className="w-32 h-32 mx-auto rounded-full mb-4 object-cover hover:scale-105 transition-transform duration-300"
               /></a>
@@ -135,7 +135,7 @@ const About = () => {
             {/* Team Member 1 */}
             <div className="bg-white rounded-lg shadow-lg p-6 text-center">
                <a href="/Profile"> <img 
-                src="./src\assets\profile1.jpg"
+                src="/assets/profile1.jpg"
                 alt="Leader"
                 className="w-32 h-32 mx-auto rounded-full mb-4 object-cover hover:scale-105 transition-transform duration-300"
               /></a>
@@ -151,7 +151,7 @@ const About = () => {
             {/* Team Member 2 */}
             <div className="bg-white rounded-lg shadow-lg p-6 text-center"> 
                 <a href="/Profile"> <img 
-                src="./src\assets\profile5.jpg"
+                src="/assets/profile5.jpg"
                 alt="Leader"
                 className="w-32 h-32 mx-auto rounded-full mb-4 object-cover hover:scale-105 transition-transform duration-300"
               /></a>
@@ -167,7 +167,7 @@ const About = () => {
             {/* Team Member 3 */}
             <div className="bg-white rounded-lg shadow-lg p-6 text-center"> 
                 <a href="/Profile"> <img 
-                src="./src\assets\profile2.jpg"
+                src="/assets/profile2.jpg"
                 alt="Leader"
                 className="w-32 h-32 mx-auto rounded-full mb-4 object-cover hover:scale-105 transition-transform duration-300"
               /></a>
@@ -182,7 +182,7 @@ const About = () => {
             </div>
              <div className="bg-white rounded-lg shadow-lg p-6 text-center"> 
                <a href="/Profile"> <img 
-                src="./src\assets\profile8.jpg"
+                src="/assets/profile8.jpg"
                 alt="Leader"
                 className="w-32 h-32 mx-auto rounded-full mb-4 object-cover hover:scale-105 transition-transform duration-300"
               /></a>
@@ -197,7 +197,7 @@ const About = () => {
             </div>
              <div className="bg-white rounded-lg shadow-lg p-6 text-center"> 
               <a href="/Profile"><img
-                src=".\src\assets\Screenshot (280).png"
+                src="/assets/Screenshot (280).png"
                 alt="Team Member"
                 className="w-32 h-32 mx-auto rounded-full mb-4 object-cover hover:scale-105 transition-transform duration-300"
               /></a>
@@ -212,7 +212,7 @@ const About = () => {
             </div>
              <div className="bg-white rounded-lg shadow-lg p-6 text-center"> 
               <a href="/Profile"> <img 
-                src="./src\assets\profile4.jpg"
+                src="/assets/profile4.jpg"
                 alt="Leader"
                 className="w-32 h-32 mx-auto rounded-full mb-4 object-cover hover:scale-105 transition-transform duration-300"
               /></a>
@@ -227,7 +227,7 @@ const About = () => {
             </div>
               <div className="bg-white rounded-lg shadow-lg p-6 text-center"> 
               <a href="/Profile"> <img 
-                src="./src\assets\profile3.jpg"
+                src="/assets/profile3.jpg"
                 alt="Leader"
                 className="w-32 h-32 mx-auto rounded-full mb-4 object-cover hover:scale-105 transition-transform duration-300"
               /></a>
@@ -242,7 +242,7 @@ const About = () => {
             </div>
                       <div className="bg-white rounded-lg shadow-lg p-6 text-center"> 
               <a href="/Profile"> <img 
-                src="./src\assets\profile1.jpg"
+                src="/assets/profile1.jpg"
                 alt="Leader"
                 className="w-32 h-32 mx-auto rounded-full mb-4 object-cover hover:scale-105 transition-transform duration-300"
               /></a>
@@ -257,7 +257,7 @@ const About = () => {
             </div>
                       <div className="bg-white rounded-lg shadow-lg p-6 text-center"> 
               <a href="/Profile"> <img 
-                src="./src\assets\profile6.jpg"
+                src="/assets/profile6.jpg"
                 alt="Leader"
                 className="w-32 h-32 mx-auto rounded-full mb-4 object-cover hover:scale-105 transition-transform duration-300"
               /></a>
@@ -272,7 +272,7 @@ const About = () => {
             </div>
                       <div className="bg-white rounded-lg shadow-lg p-6 text-center"> 
              <a href="/Profile"> <img 
-                src="./src\assets\profile1.jpg"
+                src="/assets/profile1.jpg"
                 alt="Leader"
                 className="w-32 h-32 mx-auto rounded-full mb-4 object-cover hover:scale-105 transition-transform duration-300"
               /></a>
