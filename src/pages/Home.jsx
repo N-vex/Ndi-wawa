@@ -154,7 +154,7 @@ export default function App() {
             <div className="bg-white rounded-lg shadow-lg p-6 text-center text-white dark:border-gray-700 dark:bg-gray-800">
               <img
                 className="rounded-t-lg"
-                src="/assets/pexels-olia-danilevich-8145335.jpg"
+                src="/assets/gallery7.jpg"
                 alt=""
               />
               <div className="p-5">
@@ -213,7 +213,7 @@ export default function App() {
             <div className="bg-white  rounded-lg shadow-lg p-6 text-center text-white dark:border-gray-700 dark:bg-gray-800 w-full h-full min-h-[500px] flex flex-col justify-between">
               <img
                 className="rounded-t-lg mx-auto h-48 w-full object-cover"
-                src="/assets/pexels-fauxels-3184291.jpg"
+                src="/assets/gallery8.jpg"
                 alt="Team"
               />
               <div className="p-5">
