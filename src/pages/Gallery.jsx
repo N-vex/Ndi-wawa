@@ -60,6 +60,11 @@ const Gallery = () => {
 </div>
 
 </section>
+
+    {/*Celebration section*/}
+        <section>
+            
+        </section>
     </>
   )
 }
