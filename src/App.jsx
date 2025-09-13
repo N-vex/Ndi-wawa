@@ -12,6 +12,7 @@ import Info from "./pages/Info"
 import Membership from "./pages/Membership"
 import Profile from "./pages/Profile"
 import donate from "./pages/donate"
+import "./App.css"
 
 export default function App() {
   return (

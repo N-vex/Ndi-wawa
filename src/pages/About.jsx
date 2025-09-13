@@ -103,7 +103,7 @@ const About = () => {
             {/* Logo 3 */}
             <img
               ref={(el) => (logoRefs.current[2] = el)}
-              src=".\src\assets\short5.png"
+              src="./assets/short5.png"
               alt="Recharge"
               className="h-24 cursor-pointer"
             />
@@ -272,7 +272,7 @@ const About = () => {
             </div>
                       <div className="bg-white rounded-lg shadow-lg p-6 text-center"> 
              <a href="/Profile"> <img 
-                src="/assets/profile1.jpg"
+                src="/assets/profile9.jpg"
                 alt="Leader"
                 className="w-32 h-32 mx-auto rounded-full mb-4 object-cover hover:scale-105 transition-transform duration-300"
               /></a>
