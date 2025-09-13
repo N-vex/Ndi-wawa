@@ -1,6 +1,9 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import "./Home.css";
+import slide1 from "../assets/slide3.jpg";  
+import slide2 from "../assets/slide3.jpg";  
+import slide3 from "../assets/slide3.jpg";  
 
 export default function App() {
   const titleRef = useRef(null);
@@ -51,15 +54,15 @@ export default function App() {
     <div className="relative h-full overflow-hidden">
       {/* Item 1 */}
       <div className="hidden duration-700 ease-in-out" data-carousel-item>
-        <img src="/slide1.jpg" className="absolute block w-full h-full object-cover" alt="slide"/>
+        <img src={slide1} className="absolute block w-full h-full object-cover" alt="slide"/>
       </div>
       {/* Item 2 */}
       <div className="hidden duration-700 ease-in-out" data-carousel-item>
-        <img src="/slide2.jpg" className="absolute block w-full h-full object-cover" alt="slide"/>
+        <img src={slide2} className="absolute block w-full h-full object-cover" alt="slide"/>
       </div>
       {/* Item 3 */}
       <div className="hidden duration-700 ease-in-out" data-carousel-item>
-        <img src="/slide3.jpg" className="absolute block w-full h-full object-cover" alt="slide"/>
+        <img src={slide3} className="absolute block w-full h-full object-cover" alt="slide"/>
       </div>
     </div>
   </div>
