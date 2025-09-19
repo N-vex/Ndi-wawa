@@ -124,7 +124,7 @@ const About = () => {
                 className="w-32 h-32 mx-auto rounded-full mb-4 object-cover hover:scale-105 transition-transform duration-300"
               /></a>
               <h3 className="text-xl font-semibold mb-2">Ifeanyi Eze</h3>
-              <p className="text-gray-600">Founder & President</p>
+              <p className="text-gray-600">President</p>
                        <div class="flex mt-4 sm:justify-center  space-x-6  sm:mt-0">
                         <a href="#" className="text-blue-600 hover:text-blue-800"><FaFacebook /></a>
                         <a href="#" className="text-blue-400 hover:text-blue-600"><FaTwitter /></a>
@@ -202,7 +202,7 @@ const About = () => {
                 className="w-32 h-32 mx-auto rounded-full mb-4 object-cover hover:scale-105 transition-transform duration-300"
               /></a>
               <h3 className="text-xl font-semibold mb-2">Fred Ekete</h3>
-              <p className="text-gray-600"> Diaspora</p>
+              <p className="text-gray-600"> Founder & Diaspora</p>
                <div class="flex mt-4 sm:justify-center  space-x-6  sm:mt-0">
                         <a href="#" className="text-blue-600 hover:text-blue-800"><FaFacebook /></a>
                         <a href="#" className="text-blue-400 hover:text-blue-600"><FaTwitter /></a>
@@ -227,7 +227,7 @@ const About = () => {
             </div>
               <div className="bg-white rounded-lg shadow-lg p-6 text-center"> 
               <a href="/Profile"> <img 
-                src="/assets/profile3.jpg"
+                src="/assets/pro3.jpg"
                 alt="Leader"
                 className="w-32 h-32 mx-auto rounded-full mb-4 object-cover hover:scale-105 transition-transform duration-300"
               /></a>

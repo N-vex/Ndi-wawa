@@ -1,13 +1,15 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import "./Home.css";
-import slide1 from "../assets/slide3.jpg";  
-import slide2 from "../assets/slide3.jpg";  
+import slide1 from "../assets/slide1.jpg";  
+import slide2 from "../assets/slide2.jpg";  
 import slide3 from "../assets/slide3.jpg";  
 
 export default function App() {
   const titleRef = useRef(null);
   const bgRef = useRef(null);
+  const imageContainerRef = useRef(null);
+ const images = [slide1, slide2, slide3];
   // Animate stats count up
   const stats = [
     { id: "stat-0", end: 25 },
@@ -44,42 +46,57 @@ export default function App() {
       repeat: -1, // infinite loop
       ease: "linear", // smooth
     });
+
+    const imageElements = imageContainerRef.current.querySelectorAll("img");
+
+    gsap.set(imageElements, { opacity: 0 });
+
+    const timeline = gsap.timeline({ repeat: -1, repeatDelay: 0 });
+
+    imageElements.forEach((image, index) => {
+      timeline
+        .to(image, { opacity: 1, duration: 1, ease: "power2.inOut" }, `+=${index === 0 ? 0 : 3}`)
+        .to(image, { duration: 2 }, "+=0")
+        .to(image, { opacity: 0, duration: 1, ease: "power2.inOut" }, "+=0");
+    });
+
   }, []);
 
   return (
     <>
-    <div className="relative w-full h-screen">
-  {/* Carousel Background */}
-  <div id="default-carousel" className="absolute inset-0 w-full h-full z-0" data-carousel="slide">
-    <div className="relative h-full overflow-hidden">
-      {/* Item 1 */}
-      <div className="hidden duration-700 ease-in-out" data-carousel-item>
-        <img src={slide1} className="absolute block w-full h-full object-cover" alt="slide"/>
+    <div className="relative w-full h-screen overflow-hidden">
+      {/* Background Slideshow */}
+      <div
+        ref={imageContainerRef}
+        className="absolute inset-0 w-full h-full"
+      >
+        {images.map((src, index) => (
+          <img
+            key={index}
+            src={src}
+            alt={`Slider Image ${index + 1}`}
+            className="absolute top-0 left-0 w-full h-full object-cover"
+            style={{ opacity: 0 }}
+          />
+        ))}
       </div>
-      {/* Item 2 */}
-      <div className="hidden duration-700 ease-in-out" data-carousel-item>
-        <img src={slide2} className="absolute block w-full h-full object-cover" alt="slide"/>
-      </div>
-      {/* Item 3 */}
-      <div className="hidden duration-700 ease-in-out" data-carousel-item>
-        <img src={slide3} className="absolute block w-full h-full object-cover" alt="slide"/>
+
+      {/* Overlay Content inside slider */}
+      <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center text-white px-6 bg-black/40">
+        <h1
+          ref={titleRef}
+          className="text-5xl md:text-7xl font-extrabold mb-6 drop-shadow-lg"
+        >
+          Wawa Cooperate Club 🌍
+        </h1>
+        <p className="text-lg md:text-2xl max-w-2xl">
+          From orphanages to neighborhoods, our hands reach out with love.
+        </p>
+        <button className="mt-6 px-6 py-3 bg-white text-blue-600 rounded-xl shadow-lg hover:scale-105 transition">
+          <a href="/about">Learn More</a>
+        </button>
       </div>
     </div>
-  </div>
-
-  {/* Overlay Content */}
-  <div className="relative z-20 flex flex-col items-center justify-center h-full text-center text-white px-6 bg-black/40">
-    <h1  ref={titleRef}  className="text-5xl md:text-7xl font-extrabold mb-6 drop-shadow-lg">
-      Wawa Cooperate Club 🌍
-    </h1>
-    <p className="text-lg md:text-2xl max-w-2xl">
-      From orphanages to neighborhoods, our hands reach out with love.
-    </p>
-    <button className="mt-6 px-6 py-3 bg-white text-blue-600 rounded-xl shadow-lg hover:scale-105 transition">
-      <a href="/about">Learn More</a>
-    </button>
-  </div>
-</div>
 
 
       {/* body section */}
