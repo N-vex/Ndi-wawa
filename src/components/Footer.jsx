@@ -4,7 +4,11 @@ export default function Footer() {
     <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div class="sm:flex sm:items-center sm:justify-between">
             <a href="/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
-             <ion-icon name="planet-sharp" size="large"></ion-icon>
+             <img 
+                src="/assets/logo1.jpg" 
+                alt="img" 
+                class="h-18 w-18 rounded-4xl object-cover"
+            />
                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">WAWA Cooperation Club</span>
             </a>
             <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">

@@ -31,10 +31,10 @@ const Join = () => {
   return (
     <>
       <div className="flex justify-center items-center h-24 bg-black text-white font-bold">
-        <h1 className="text-4xl font-bold">
+        <h1 className="text-3xl font-bold">
           JOIN WAWA COOPERATE CLUB TODAY FOR A CAUSE
         </h1>
-      </div>
+      </div> <br /><br />
 
       <form ref={form} onSubmit={sendEmail} className="max-w-md mx-auto">
       
