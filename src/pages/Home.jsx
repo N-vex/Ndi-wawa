@@ -1,35 +1,23 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import "./Home.css";
-import slide1 from "../assets/slide1.jpg";  
-import slide2 from "../assets/slide2.jpg";  
-import slide3 from "../assets/slide3.jpg";  
+import slide1 from "../assets/slide1.jpg";
+import slide2 from "../assets/slide2.jpg";
+import slide3 from "../assets/slide3.jpg";
+import slide4 from "../assets/gallery12.jpg";
+import slide5 from "../assets/gallery13.jpg";
+import slide6 from "../assets/gallery14.jpeg";
+import slide7 from "../assets/gallery15.jpg";
+import slide8 from "../assets/gallery16.jpeg";
+import slide9 from "../assets/gallery17.jpeg";
+import slide10 from "../assets/gallery18.jpeg";
 
 export default function App() {
   const titleRef = useRef(null);
   const bgRef = useRef(null);
   const imageContainerRef = useRef(null);
- const images = [slide1, slide2, slide3];
-  // Animate stats count up
-  const stats = [
-    { id: "stat-0", end: 25 },
-    { id: "stat-1", end: 5 },
-    { id: "stat-2", end: 5 },
-    { id: "stat-3", end: 10 },
-    { id: "stat-4", end: 99 },
-  ];
-
-  stats.forEach((stat) => {
-    let obj = { val: 0 };
-    gsap.to(obj, {
-      val: stat.end,
-      duration: 3,
-      ease: "power1.out",
-      onUpdate: () => {
-        document.getElementById(stat.id).innerText = Math.floor(obj.val);
-      },
-    });
-  });
+  const images = [slide1, slide2, slide3, slide4, slide5, slide6, slide7, slide8, slide9, slide10];
+  // Stats array moved into useEffect
 
   useEffect(() => {
     // Animate title bounce
@@ -55,49 +43,70 @@ export default function App() {
 
     imageElements.forEach((image, index) => {
       timeline
-        .to(image, { opacity: 1, duration: 1, ease: "power2.inOut" }, `+=${index === 0 ? 0 : 3}`)
+        .to(
+          image,
+          { opacity: 1, duration: 1, ease: "power2.inOut" },
+          `+=${index === 0 ? 0 : 3}`
+        )
         .to(image, { duration: 2 }, "+=0")
         .to(image, { opacity: 0, duration: 1, ease: "power2.inOut" }, "+=0");
     });
 
+    // Animate stats count up (run after DOM elements exist)
+    const stats = [
+      { id: "stat-0", end: 25 },
+      { id: "stat-1", end: 5 },
+      { id: "stat-2", end: 5 },
+      { id: "stat-3", end: 10 },
+      { id: "stat-4", end: 99 },
+    ];
+
+    stats.forEach((stat) => {
+      let obj = { val: 0 };
+      gsap.to(obj, {
+        val: stat.end,
+        duration: 3,
+        ease: "power1.out",
+        onUpdate: () => {
+          const el = document.getElementById(stat.id);
+          if (el) el.innerText = Math.floor(obj.val);
+        },
+      });
+    });
   }, []);
 
   return (
     <>
-    <div className="relative w-full h-screen overflow-hidden">
-      {/* Background Slideshow */}
-      <div
-        ref={imageContainerRef}
-        className="absolute inset-0 w-full h-full"
-      >
-        {images.map((src, index) => (
-          <img
-            key={index}
-            src={src}
-            alt={`Slider Image ${index + 1}`}
-            className="absolute top-0 left-0 w-full h-full object-cover"
-            style={{ opacity: 0 }}
-          />
-        ))}
-      </div>
+      <div className="relative w-full h-screen overflow-hidden">
+        {/* Background Slideshow */}
+        <div ref={imageContainerRef} className="absolute inset-0 w-full h-full">
+          {images.map((src, index) => (
+            <img
+              key={index}
+              src={src}
+              alt={`Slider Image ${index + 1}`}
+              className="absolute top-0 left-0 w-full h-full object-cover"
+              style={{ opacity: 0 }}
+            />
+          ))}
+        </div>
 
-      {/* Overlay Content inside slider */}
-      <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center text-white px-6 bg-black/40">
-        <h1
-          ref={titleRef}
-          className="text-5xl md:text-7xl font-extrabold mb-6 drop-shadow-lg"
-        >
-          Wawa Cooperate Club 🌍
-        </h1>
-        <p className="text-lg md:text-2xl max-w-2xl">
-          From orphanages to neighborhoods, our hands reach out with love.
-        </p>
-        <button className="mt-6 px-6 py-3 bg-white text-blue-600 rounded-xl shadow-lg hover:scale-105 transition">
-          <a href="/about">Learn More</a>
-        </button>
+        {/* Overlay Content inside slider */}
+        <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center text-white px-6 bg-black/40">
+          <h1
+            ref={titleRef}
+            className="text-5xl md:text-7xl font-extrabold mb-6 drop-shadow-lg"
+          >
+            Wawa Cooperate Club 🌍
+          </h1>
+          <p className="text-lg md:text-2xl max-w-2xl">
+            From orphanages to neighborhoods, our hands reach out with love.
+          </p>
+          <button className="mt-6 px-6 py-3 bg-white text-blue-600 rounded-xl shadow-lg hover:scale-105 transition">
+            <a href="/about">Learn More</a>
+          </button>
+        </div>
       </div>
-    </div>
-
 
       {/* body section */}
       <section>
@@ -169,11 +178,7 @@ export default function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             {/* Left side - Achievement Card */}
             <div className="bg-white rounded-lg shadow-lg p-6 text-center text-white dark:border-gray-700 dark:bg-gray-800">
-              <img
-                className="rounded-t-lg"
-                src="/assets/gallery7.jpg"
-                alt=""
-              />
+              <img className="rounded-t-lg" src="/assets/gallery7.jpg" alt="" />
               <div className="p-5">
                 <a
                   href="/achievements"
@@ -268,15 +273,15 @@ export default function App() {
               </div>
             </div>
             <div className="bg-white rounded-lg shadow-lg p-6 text-center text-white dark:border-gray-700 dark:bg-gray-800 w-full h-full min-h-[500px] flex flex-col justify-between">
-                <img
-                  className="rounded-t-lg mx-auto h-48 w-full object-cover"
-                  src="/assets/team1.png"
-                  alt="img"
-                />
+              <img
+                className="rounded-t-lg mx-auto h-48 w-full object-cover"
+                src="/assets/team1.png"
+                alt="img"
+              />
               <div className="p-5">
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                   Part of the Team at Work
-                  </h5>
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  Part of the Team at Work
+                </h5>
                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
                   Photo of the Team at Work
                 </p>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const donate = () => {
+const Donate = () => {
   return (
     <>
     {/*Donate for a cause and make the world a better place*/}
@@ -41,4 +41,4 @@ const donate = () => {
   )
 }
 
-export default donate
+export default Donate
