@@ -15,7 +15,7 @@ export default function Navbar() {
             className="h-18 w-18 rounded-4xl object-cover"
           />
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            WCC Enugu
+            WCC ENUGU
           </span>
         </a>
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">

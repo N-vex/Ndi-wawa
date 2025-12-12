@@ -225,6 +225,25 @@ export default function App() {
         </div>
       </section>
 
+      {/* highlight video */}
+      <section className="py-12">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-6 text-white text-center">
+            Wawa Cooperation Club Highlights
+          </h2>
+          <div className="aspect-w-16 aspect-h-9">
+            <iframe
+              src="https://www.youtube.com/embed/9-EJnhqX25k?si=2ShHEVOSlrfhYTHt" 
+              title="Wawa Cooperation Club Highlights"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="rounded-lg shadow-lg object-cover w-full h-[400px]"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
       {/* Team Section */}
       <section>
         <div className="container mx-auto px-4 py-12">

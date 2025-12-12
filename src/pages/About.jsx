@@ -311,7 +311,7 @@ const About = () => {
             <div className="bg-white rounded-lg shadow-lg p-6 text-center">
               <Link to="/profile">
                 <img
-                  src="/assets/pro3.jpg"
+                  src="/assets/profile12.jpeg"
                   alt="Leader"
                   className="w-32 h-32 mx-auto rounded-full mb-4 object-cover hover:scale-105 transition-transform duration-300"
                 />
@@ -336,7 +336,7 @@ const About = () => {
             <div className="bg-white rounded-lg shadow-lg p-6 text-center">
               <Link to="/profile">
                 <img
-                  src="/assets/profile1.jpg"
+                  src="/assets/profile11.jpeg"
                   alt="Leader"
                   className="w-32 h-32 mx-auto rounded-full mb-4 object-cover hover:scale-105 transition-transform duration-300"
                 />
